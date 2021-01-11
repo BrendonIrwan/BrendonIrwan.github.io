@@ -1,0 +1,11 @@
+{% unless definedCssHeaderFooter %}
+  <link rel="stylesheet" href="/res/styles/header-footer.css" />
+  {% assign definedCssHeaderFooter = true %}
+{% endunless %}
+{% if page.head.title %}
+  <header>
+    <h1>{{ page.body.title }}</h1>
+    <span class="subtitle">{{ page.body.subtitle }}</span>
+  </header>
+{% else %} {% include banner.html %} {% endif %}
+<hr />

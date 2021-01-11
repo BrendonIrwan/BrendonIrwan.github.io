@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include variables.html %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" href="/res/styles/base.css" />
+    <link rel="stylesheet" href="/res/styles/document.css" />
+    <title>
+      {% if page.head.title %} {{ page.head.title }} | EDEN Online
+      {% else %} EDEN Online {% endif %}
+    </title>
+    {% assign definedCssHeaderFooter = false %}
+    {% assign definedCssPageMenu = false %}
+  </head>
+  <body>
+    {% include css-curtain.html %}
+    <article>
+      {% include header.html %} {% include page-menu.html %} {{ content }}
+    </article>
+    <footer>
+      {% include page-info.html %} {% include jump-menu.html %}
+    </footer>
+    {% include menu.html %}
+  </body>
+</html>

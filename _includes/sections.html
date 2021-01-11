@@ -1,0 +1,15 @@
+{% for entry in page.menu %}
+  {% assign slice = entry.label | slice: 0 %}
+  {% if slice == "^" %} {% continue %} {% endif %}
+  {% assign id = entry.href | remove_first: "#" %}
+  <section id="{{ id }}">
+    <header>
+      <h2>{{ entry.title }}</h2>
+      <hr role="none" />
+      {% if entry.subtitle != "" %}
+        <span class="subtitle">{{ entry.subtitle }}</span>
+      {% endif %}
+    </header>
+    {% include_relative _sections/{{ id }}.html %}
+  </section>
+{% endfor %}

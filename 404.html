@@ -1,0 +1,35 @@
+---
+date: "2020-12-21"
+head:
+  title: "HTTP 404: Not Found"
+body:
+  title: "HTTP 404: Not Found"
+  subtitle: "<span class=\"italic\">The page or resource you requested for can not be found.</span>"
+menu:
+  - label: "^Up"
+    href: "."
+  - label: "^Home"
+    href: "/"
+---
+{% include variables.html %}
+<script defer src="/res/scripts/url-correction.js"></script>
+<section>
+  <div>
+    <span>Please note that <span class="highlight">we have moved the Online
+Portal to our organization account: <code>{{ gitUser }}</code></span>.</span>
+  </div>
+  <div>
+    <span>If JavaScript is enabled, we have attempted to correct your URL: [<a
+id="url-correction">Try It</a>]</span>
+  </div>
+  <div>
+    <span>Otherwise, replace <code>BrendonIrwan</code> with <code>{{ gitUser
+}}</code>.</span><br /><span class="smaller">For instance, if your URL is <code
+>https://BrendonIrwan.github.io/net/maeng-mini</code>, then the correction would
+be <code>https://{{ gitUser }}.github.io/net/maeng-mini</code></span>.
+  </div>
+  <div>
+    <span class="italic">As always, we apologize for any inconvenience
+caused.</span>
+  </div>
+</section>

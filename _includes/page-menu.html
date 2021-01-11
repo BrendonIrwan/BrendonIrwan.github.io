@@ -1,0 +1,18 @@
+{% unless definedCssPageMenu %}
+  <link rel="stylesheet" href="/res/styles/page-menu.css" />
+  {% assign definedCssPageMenu = true %}
+{% endunless %}
+<nav>
+  <div class="page-menu">
+    <span>Menu:</span>
+    {% for entry in page.menu %}
+      {% assign slice = entry.label | slice: 0 %}
+      {% if slice == "^" %}
+        <span>[<a class="up" href="{{ entry.href }}">{{ entry.label | remove_first: "^" }}</a>]</span>
+      {% else %}
+        <span>[<a href="{{ entry.href }}">{{ entry.label }}</a>]</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <hr />
+</nav>

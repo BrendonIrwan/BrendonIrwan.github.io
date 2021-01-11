@@ -1,0 +1,120 @@
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+input:not([type="color"]):not([type="file"]),
+select,
+textarea {
+  padding: var(--spacer);
+}
+
+button,
+input[type="color"] {
+  background-color: var(--colorAccentMin);
+  border-block-end-color: var(--colorAccentLow);
+  border-block-end-style: solid;
+  border-block-end-width: 2px;
+  border-block-start-color: var(--colorAccentHigh);
+  border-block-start-style: solid;
+  border-block-start-width: 2px;
+  border-inline-end-color: var(--colorAccentLow);
+  border-inline-end-style: solid;
+  border-inline-end-width: 2px;
+  border-inline-start-color: var(--colorAccentHigh);
+  border-inline-start-style: solid;
+  border-inline-start-width: 2px;
+}
+
+button:hover,
+input[type="color"]:hover {
+  background-color: var(--colorButtonHoverBackground);
+}
+
+button:active,
+input[type="color"]:active {
+  background-color: var(--colorButtonActiveBackground);
+  border-block-end-color: var(--colorAccentHigh);
+  border-block-start-color: var(--colorAccentLow);
+  border-inline-end-color: var(--colorAccentHigh);
+  border-inline-start-color: var(--colorAccentLow);
+}
+
+button:focus,
+input[type="color"]:focus {
+  outline: 1px solid var(--colorButtonFocusOutline);
+}
+
+input:not([type="color"]):not([type="file"]),
+select,
+textarea {
+  background-color: var(--colorInputBackground);
+  border-block-end-color: var(--colorAccentHigh);
+  border-block-end-style: solid;
+  border-block-end-width: 1px;
+  border-block-start-color: var(--colorAccentLow);
+  border-block-start-style: solid;
+  border-block-start-width: 2px;
+  border-inline-end-color: var(--colorAccentHigh);
+  border-inline-end-style: solid;
+  border-inline-end-width: 1px;
+  border-inline-start-color: var(--colorAccentLow);
+  border-inline-start-style: solid;
+  border-inline-start-width: 2px;
+}
+
+input:not([type="color"]):not([type="file"]):hover,
+select:hover,
+textarea:hover {
+  border-block-start-color: var(--colorInputHoverBorder);
+  border-inline-start-color: var(--colorInputHoverBorder);
+}
+
+input:not([type="color"]):not([type="file"]):focus,
+select:focus,
+textarea:focus {
+  border-block-start-color: var(--colorInputFocusBorder);
+  border-inline-start-color: var(--colorInputFocusBorder);
+}
+
+input:invalid {
+  border-block-start-color: var(--colorInputInvalidBorder);
+  border-inline-start-color: var(--colorInputInvalidBorder);
+}
+
+fieldset {
+  border: 1px solid var(--colorAccentLow);
+  margin-block-end: calc(var(--spacer) * 2);
+  margin-block-start: calc(var(--spacer) * 2);
+  padding-inline-end: calc(var(--spacer) * 2);
+  padding-inline-start: calc(var(--spacer) * 2);
+}
+
+legend {
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: light), print {
+  button,
+  input[type="color"] {
+    border-block-end-color: var(--colorAccentHigh);
+    border-block-start-color: var(--colorAccentLow);
+    border-inline-end-color: var(--colorAccentHigh);
+    border-inline-start-color: var(--colorAccentLow);
+  }
+
+  button:active,
+  input[type="color"]:active,
+  input:not([type="color"]):not([type="file"]),
+  select,
+  textarea {
+    border-block-end-color: var(--colorAccentLow);
+    border-block-start-color: var(--colorAccentHigh);
+    border-inline-end-color: var(--colorAccentLow);
+    border-inline-start-color: var(--colorAccentHigh);
+  }
+}

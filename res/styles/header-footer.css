@@ -2,7 +2,7 @@ article > header > :not(:last-child) {
   margin-block-end: var(--spacer);
 }
 
-article > header > *:only-child {
+article > header > :only-child {
   margin-block-end: calc(var(--spacer) * 2);
 }
 
@@ -14,7 +14,8 @@ header.banner > :not(:last-child) {
   margin-block-end: var(--spacer);
 }
 
-header.banner > h1 {
+header.banner > h1,
+article > header > :only-child {
   font-size: 24pt;
 }
 

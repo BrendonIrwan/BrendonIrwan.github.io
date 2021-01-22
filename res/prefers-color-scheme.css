@@ -1,15 +1,15 @@
 #prefers-color-scheme::after {
-  content: "unset"
+  content: "unset";
 }
 
 @media (prefers-color-scheme: light) {
   #prefers-color-scheme::after {
-    content: "set to light"
+    content: "set to light";
   }
 }
 
 @media (prefers-color-scheme: dark) {
   #prefers-color-scheme::after {
-    content: "set to dark"
+    content: "set to dark";
   }
 }

@@ -25,6 +25,18 @@ article > section {
   padding-block-start: calc(var(--spacer) * 2);
 }
 
+article > section h5,
+article > section li,
+article > section p {
+  margin-block-end: calc(var(--spacer) * 3);
+}
+
+article > section p::before {
+  color: var(--colorAccentMin);
+  content: "¶ ";
+  font-size: smaller;
+}
+
 article > section > div {
   margin-block-end: calc(var(--spacer) * 4);
 }
@@ -33,15 +45,21 @@ article > section > header {
   margin-block-end: calc(var(--spacer) * 2);
 }
 
+article > section > header h5,
+article > section > header li,
+article > section > header p {
+  margin-block-end: unset;
+}
+
+article > section > header p::before {
+  color: unset;
+  content: unset;
+  font-size: unset;
+}
+
 article > section > header > .subtitle {
   font-style: italic;
   font-weight: bold;
-}
-
-article > section h5,
-article > section li,
-article > section p {
-  margin-block-end: calc(var(--spacer) * 3);
 }
 
 blockquote {
@@ -54,8 +72,9 @@ blockquote {
 
 code,
 pre,
-li.technical > span:first-child,
-ul.technical > li > span:first-child {
+dl.technical > li > dt,
+li.technical > dt,
+ul.technical > li > dt {
   background-color: var(--colorAccentMin);
   color: var(--colorTechnical);
   font-family: var(--fontFamilyMonospace);
@@ -70,67 +89,38 @@ pre {
   overflow-x: auto;
 }
 
-img {
-  margin: auto;
-  max-width: 100%;
-}
-
-li {
-  margin-inline-start: calc(var(--spacer) * 4);
-}
-
-li:hover {
-  background-color: var(--colorHoverBackground);
-}
-
-li > span + span::before {
-  content: " — ";
-}
-
+dl.anchor,
 li.anchor,
 ul.anchor,
+dl.headered,
 li.headered,
 ul.headered,
+dl.technical,
 li.technical,
 ul.technical {
   list-style-type: none;
 }
 
+dl.anchor > li::before,
 li.anchor::before,
 ul.anchor > li::before {
   display: none;
 }
 
-li.anchor > span:first-child > a,
-ul.anchor > li > span:first-child > a,
-li.headered > span:first-child,
-ul.headered > li > span:first-child {
+dl.anchor > li > dt > a,
+li.anchor > dt > a,
+ul.anchor > li > dt > a,
+dl.headered > li > dt,
+li.headered > dt,
+ul.headered > li > dt {
   font-weight: bold;
 }
 
-ol ol,
-ul ul {
-  margin-block-start: calc(var(--spacer) * 2);
-  margin-inline-start: calc(var(--spacer) * 2);
+del {
+  color: var(--colorAccentMid);
 }
 
-ul {
-  list-style: "‒ " outside;
-}
-
-ul ul.anchor,
-ul ul.headered,
-ul ul.technical {
-  list-style: "⌎› " outside;
-}
-
-ul.no-margin li,
-ul.no-margin ul {
-  margin-block-end: 0;
-  margin-block-start: 0;
-}
-
-hr {
+div.hr {
   border: 0;
   border-block-end-color: var(--colorAccentLow);
   border-block-end-style: solid;
@@ -142,8 +132,53 @@ hr {
   margin-block-start: var(--spacer);
 }
 
-p::before {
-  color: var(--colorAccentMin);
-  content: "¶ ";
-  font-size: smaller;
+dl dl,
+ol ol,
+ul ul {
+  margin-block-start: calc(var(--spacer) * 2);
+  margin-inline-start: calc(var(--spacer) * 2);
+}
+
+dl,
+ul {
+  list-style: "‒ " outside;
+}
+
+dl dl.anchor,
+dl dl.headered,
+dl dl.technical,
+ul ul.anchor,
+ul ul.headered,
+ul ul.technical {
+  list-style: "⌎› " outside;
+}
+
+dl.no-margin li,
+dl.no-margin dl,
+ul.no-margin li,
+ul.no-margin ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+img {
+  margin: auto;
+  max-width: 100%;
+}
+
+li {
+  margin-inline-start: calc(var(--spacer) * 4);
+}
+
+:not(a) > li:hover {
+  background-color: var(--colorHoverBackground);
+}
+
+li > dd,
+li > dt {
+  display: inline;
+}
+
+li > dt + dd::before {
+  content: " — ";
 }

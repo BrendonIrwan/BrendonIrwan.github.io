@@ -16,11 +16,6 @@
   font-style: italic;
 }
 
-.line-through {
-  color: var(--colorAccentMid);
-  text-decoration: line-through;
-}
-
 .no-margin {
   margin-block-end: 0;
   margin-block-start: 0;
@@ -63,7 +58,6 @@ body {
   --colorAnchorHover: #bfbfef;
   --colorAnchorHoverBackground: #0f0fef7f;
   --colorAnchorHoverBackgroundSolid: #171787;
-  --colorAnchorVisited: #bf7fef;
   --colorBackground: #0f0f0f;
   --colorButtonActiveBackground: #0fef0f3f;
   --colorButtonActiveBackgroundSolid: #1b521b;
@@ -90,18 +84,20 @@ a {
   margin-inline-start: 1px;
 }
 
-a:hover {
+a:hover,
+a:hover > * {
   background-color: var(--colorAnchorHoverBackground);
   color: var(--colorAnchorHover);
 }
 
-a:focus {
+a:focus,
+a:focus > * {
   background-color: var(--colorAnchorFocusBackground);
   color: var(--colorAnchorFocus);
 }
 
 a:visited {
-  color: var(--colorAnchorVisited);
+  color: var(--colorAnchor);
 }
 
 a.out::before {

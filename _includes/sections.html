@@ -5,9 +5,9 @@
   <section id="{{ id }}">
     <header>
       <h2>{{ entry.title }}</h2>
-      <hr role="none" />
+      <div class="hr"></div>
       {% if entry.subtitle != "" %}
-        <span class="subtitle">{{ entry.subtitle }}</span>
+        <p class="subtitle">{{ entry.subtitle }}</p>
       {% endif %}
     </header>
     {% include_relative _sections/{{ id }}.html %}

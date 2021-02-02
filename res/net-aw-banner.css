@@ -1,0 +1,5 @@
+@media (prefers-color-scheme: light), print {
+  img#net-aw-banner {
+    filter: invert(100%);
+  }
+}

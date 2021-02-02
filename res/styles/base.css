@@ -84,14 +84,12 @@ a {
   margin-inline-start: 1px;
 }
 
-a:hover,
-a:hover > * {
+a:hover {
   background-color: var(--colorAnchorHoverBackground);
   color: var(--colorAnchorHover);
 }
 
-a:focus,
-a:focus > * {
+a:focus {
   background-color: var(--colorAnchorFocusBackground);
   color: var(--colorAnchorFocus);
 }

@@ -1,13 +1,19 @@
 {% unless definedCssHeaderFooter %}
-  <link rel="stylesheet" href="/res/styles/header-footer.css" />
+<link rel="stylesheet" href="/res/styles/header-footer.css" />
   {% assign definedCssHeaderFooter = true %}
 {% endunless %}
-{% if page.head.title %}
-  <header>
-    <h1>{{ page.body.title }}</h1>
-    {% if page.body.subtitle %}
-      <p class="subtitle">{{ page.body.subtitle }}</p>
-    {% endif %}
-  </header>
-{% else %} {% include banner.html %} {% endif %}
+{% if page.body.banner %}
+<header role="banner">
+  {{ page.body.banner }}
+</header>
+{% elsif page.head.title %}
+<header>
+  <h1>{{ page.body.title }}</h1>
+  {% if page.body.subtitle %}
+  <p class="subtitle">{{ page.body.subtitle }}</p>
+  {% endif %}
+</header>
+{% else %}
+{% include banner.html %}
+{% endif %}
 <div class="hr"></div>

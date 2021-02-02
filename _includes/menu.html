@@ -4,9 +4,9 @@
     <label>≡ Menu</label>
     <div class="menu stem" role="menu">
       {% for entry in page.menu %}
-        <div class="menu leaf" role="menuitem">
-          <a href="{{ entry.href }}">{{ entry.label }}</a>
-        </div>
+      <div class="menu leaf" role="menuitem">
+        <a href="{{ entry.href }}">{{ entry.label }}</a>
+      </div>
       {% endfor %}
     </div>
   </div>

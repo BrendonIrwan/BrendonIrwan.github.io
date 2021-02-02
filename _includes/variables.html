@@ -2,6 +2,8 @@
 {% assign gitUser = "ed7n" %}
 {% capture gitHome %}{{ gitHost }}/{{ gitUser }}{% endcapture %}
 {% capture htmlAOut %}a class="out" rel="noopener" target="_blank" href={% endcapture %}
+{% capture siteTitle %}Gateway{% endcapture %}
+{% capture siteSubtitle %}Portal Bridging Site{% endcapture %}
 {% capture siteUrl %}{{ gitUser }}.github.io{% endcapture %}
 {% if page.key %}
   {% assign slice = page.key | slice: 0, 5 %}

@@ -75,10 +75,13 @@ blockquote {
 }
 
 code,
-kbd,
+kbd > kbd,
+kbd > samp,
 pre,
-li.technical > span:first-child,
-ul.technical > li > span:first-child {
+li.technical > :not(ol):first-child,
+li.technical > :not(ul):first-child,
+ul.technical > li > :not(ol):first-child,
+ul.technical > li > :not(ul):first-child {
   background-color: var(--colorAccentMin);
   font-family: var(--fontFamilyMonospace);
   font-size: smaller;
@@ -87,8 +90,10 @@ ul.technical > li > span:first-child {
 
 code,
 pre,
-li.technical > span:first-child,
-ul.technical > li > span:first-child {
+li.technical > :not(ol):first-child,
+li.technical > :not(ul):first-child,
+ul.technical > li > :not(ol):first-child,
+ul.technical > li > :not(ul):first-child {
   color: var(--colorTechnical);
 }
 
@@ -113,14 +118,20 @@ ul.anchor > li::before {
   display: none;
 }
 
-li.anchor > span:first-child > a,
-ul.anchor > li > span:first-child > a,
-li.headered > span:first-child,
-ul.headered > li > span:first-child {
+li.anchor > :not(ol):first-child > a,
+li.anchor > :not(ul):first-child > a,
+ul.anchor > li > :not(ol):first-child > a,
+ul.anchor > li > :not(ul):first-child > a,
+li.headered > :not(ol):first-child,
+li.headered > :not(ul):first-child,
+ul.headered > li > :not(ol):first-child,
+ul.headered > li > :not(ul):first-child {
   font-weight: bold;
 }
 
-kbd {
+kbd > kbd,
+kbd > samp {
+  border-radius: 4px;
   color: var(--colorAccentMax);
 }
 
@@ -146,6 +157,16 @@ ul ul {
   margin-inline-start: calc(var(--spacer) * 2);
 }
 
+ol.no-margin li,
+ol.no-margin ol,
+ol.no-margin ul,
+ul.no-margin li,
+ul.no-margin ol,
+ul.no-margin ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
 ul {
   list-style: "‒ " outside;
 }
@@ -154,12 +175,6 @@ ul ul.anchor,
 ul ul.headered,
 ul ul.technical {
   list-style: "⌎› " outside;
-}
-
-ul.no-margin li,
-ul.no-margin ul {
-  margin-block-end: 0;
-  margin-block-start: 0;
 }
 
 img {
@@ -171,7 +186,7 @@ li {
   margin-inline-start: calc(var(--spacer) * 4);
 }
 
-li > span:first-child + span::before {
+li > :not(ul):first-child + :not(ul)::before {
   content: " — ";
 }
 

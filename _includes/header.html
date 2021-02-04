@@ -3,7 +3,7 @@
   {% assign definedCssHeaderFooter = true %}
 {% endunless %}
 {% if page.body.banner %}
-<header role="banner">
+<header>
   {{ page.body.banner }}
 </header>
 {% elsif page.head.title %}
@@ -14,6 +14,8 @@
   {% endif %}
 </header>
 {% else %}
+<header class="banner">
 {% include banner.html %}
+</header>
 {% endif %}
 <div class="hr"></div>

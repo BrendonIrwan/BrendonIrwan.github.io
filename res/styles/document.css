@@ -1,5 +1,5 @@
-.smaller {
-  line-height: var(--lineHeight);
+:not(a) > li:hover {
+  background-color: var(--colorHoverBackground);
 }
 
 body {
@@ -23,6 +23,10 @@ article > section {
   margin-block-end: calc(var(--spacer) * 8);
   margin-block-start: calc(var(--spacer) * 6);
   padding-block-start: calc(var(--spacer) * 2);
+}
+
+article > section:target {
+  animation: 2s linear 3s both targetHighlightFadeOut;
 }
 
 article > section h5,
@@ -71,15 +75,21 @@ blockquote {
 }
 
 code,
+kbd,
 pre,
-dl.technical > li > dt,
-li.technical > dt,
-ul.technical > li > dt {
+li.technical > span:first-child,
+ul.technical > li > span:first-child {
   background-color: var(--colorAccentMin);
-  color: var(--colorTechnical);
   font-family: var(--fontFamilyMonospace);
   font-size: smaller;
   padding: var(--spacer);
+}
+
+code,
+pre,
+li.technical > span:first-child,
+ul.technical > li > span:first-child {
+  color: var(--colorTechnical);
 }
 
 pre {
@@ -89,31 +99,29 @@ pre {
   overflow-x: auto;
 }
 
-dl.anchor,
 li.anchor,
 ul.anchor,
-dl.headered,
 li.headered,
 ul.headered,
-dl.technical,
 li.technical,
 ul.technical {
   list-style-type: none;
 }
 
-dl.anchor > li::before,
 li.anchor::before,
 ul.anchor > li::before {
   display: none;
 }
 
-dl.anchor > li > dt > a,
-li.anchor > dt > a,
-ul.anchor > li > dt > a,
-dl.headered > li > dt,
-li.headered > dt,
-ul.headered > li > dt {
+li.anchor > span:first-child > a,
+ul.anchor > li > span:first-child > a,
+li.headered > span:first-child,
+ul.headered > li > span:first-child {
   font-weight: bold;
+}
+
+kbd {
+  color: var(--colorAccentMax);
 }
 
 del {
@@ -132,29 +140,22 @@ div.hr {
   margin-block-start: var(--spacer);
 }
 
-dl dl,
 ol ol,
 ul ul {
   margin-block-start: calc(var(--spacer) * 2);
   margin-inline-start: calc(var(--spacer) * 2);
 }
 
-dl,
 ul {
   list-style: "‒ " outside;
 }
 
-dl dl.anchor,
-dl dl.headered,
-dl dl.technical,
 ul ul.anchor,
 ul ul.headered,
 ul ul.technical {
   list-style: "⌎› " outside;
 }
 
-dl.no-margin li,
-dl.no-margin dl,
 ul.no-margin li,
 ul.no-margin ul {
   margin-block-end: 0;
@@ -170,15 +171,20 @@ li {
   margin-inline-start: calc(var(--spacer) * 4);
 }
 
-:not(a) > li:hover {
-  background-color: var(--colorHoverBackground);
-}
-
-li > dd,
-li > dt {
-  display: inline;
-}
-
-li > dt + dd::before {
+li > span:first-child + span::before {
   content: " — ";
+}
+
+.smaller {
+  line-height: var(--lineHeight);
+}
+
+@keyframes targetHighlightFadeOut {
+  from {
+    background-color: var(--colorHoverBackground);
+  }
+
+  to {
+    background-color: var(--colorBackground);
+  }
 }

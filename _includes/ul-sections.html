@@ -1,5 +1,5 @@
 {% for entry in site.data[include.key].menu %}
 {% assign slice = entry.label | slice: 0 %}
 {% if slice == "^" %} {% continue %} {% endif %}
-<li><dt>[<a href="/{{ site.data[include.key].path }}{{ entry.href }}">{{ entry.label }}</a>]</dt>{% if entry.subtitle != "" %}<dd>{{ entry.subtitle }}</dd>{% endif %}</li>
+<li><span>[<a href="/{{ site.data[include.key].path }}{{ entry.href }}">{{ entry.label }}</a>]</span>{% if entry.subtitle != "" %}<span>{{ entry.subtitle }}</span>{% endif %}</li>
 {% endfor %}

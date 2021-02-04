@@ -1,6 +1,6 @@
-# EDEN Online Gateway Repository
+# Gateway Repository
 
-—ED7 ENTERTAINMENT Online Portal Gateway Repository.
+—Portal Bridging Site Repository.
 
 ***Attention please.***
 

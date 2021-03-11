@@ -1,5 +1,5 @@
 .menu {
-  font-size: 12pt;
+  font-size: var(--fontSize);
 }
 
 .menu.root,
@@ -28,7 +28,7 @@
 
 .menu.root {
   font-weight: bold;
-  padding: calc(var(--spacer) * 2);
+  padding: var(--spacer2);
   user-select: none;
   position: fixed;
   left: 0;
@@ -71,10 +71,11 @@
 }
 
 .menu.leaf > a {
-  padding-block-end: calc(var(--spacer) * 2);
-  padding-block-start: calc(var(--spacer) * 2);
-  padding-inline-end: calc(var(--spacer) * 4);
-  padding-inline-start: calc(var(--spacer) * 4);
+  flex-grow: 1;
+  padding-block-end: var(--spacer2);
+  padding-block-start: var(--spacer2);
+  padding-inline-end: var(--spacer4);
+  padding-inline-start: var(--spacer4);
   word-break: keep-all;
 }
 

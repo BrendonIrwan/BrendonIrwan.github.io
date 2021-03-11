@@ -1,17 +1,24 @@
 * {
+  /* epiphany */
+  border-radius: 0;
   box-sizing: border-box;
   color-adjust: exact;
   margin: 0;
+  min-width: 0;
   padding: 0;
-  /* non-standard */
   -webkit-print-color-adjust: exact;
+}
+
+:focus {
+  /* chromium */
+  outline: none;
 }
 
 body {
   background-color: var(--colorBackground);
   color: var(--color);
   font-family: var(--fontFamily);
-  font-size: 12pt;
+  font-size: var(--fontSize);
   --color: #efefef;
   --colorAccentHigh: #afafaf;
   --colorAccentHighBump: #a7a7a7;
@@ -45,6 +52,7 @@ body {
   --colorHoverBackground: #efefef12;
   --colorHoverBackgroundSolid: #1f1f1f;
   --colorInputBackground: #000;
+  --colorInputActiveBorder: #0fefbf;
   --colorInputFocusBorder: #0fbfef;
   --colorInputHoverBorder: #0f0fef;
   --colorInputInvalidBorder: #ef0fbf;
@@ -52,11 +60,22 @@ body {
   --fontFamily: "Cantarell", "Roboto", "San Francisco", "Segoe UI",
     "Liberation Sans", "Arimo", "Arial", sans-serif;
   --fontFamilyMonospace: "Liberation Mono", "Roboto Mono", "Cousine", monospace;
+  --fontSize: 12pt;
+  --fontSizeFactorInput: 0.9167;
+  --fontSizeInput: 11.0004pt;
+  --spacer: 0.25em;
+  --spacer2: 0.5em;
+  --spacer3: 0.75em;
+  --spacer4: 1em;
+  --spacer5: 1.25em;
+  --spacer6: 1.5em;
+  --spacer7: 1.75em;
+  --spacer8: 2em;
+  --spacer16: 4em;
 }
 
 a {
   color: var(--colorAnchor);
-  flex: 1 0 0;
   margin-inline-end: 1px;
   margin-inline-start: 1px;
 }
@@ -93,7 +112,7 @@ a.up::before {
   text-decoration: underline;
 }
 
-.no-margin {
+.no-margin * {
   margin-block-end: 0;
   margin-block-start: 0;
 }
@@ -109,7 +128,8 @@ a.up::before {
 
 @media (max-width: 720px) {
   body {
-    font-size: 11pt;
+    --fontSize: 11pt;
+    --fontSizeInput: 10.0837pt;
   }
 }
 
@@ -148,7 +168,8 @@ a.up::before {
 }
 
 @media print {
-  body, .highlight {
+  body,
+  .highlight {
     background-color: unset;
   }
 

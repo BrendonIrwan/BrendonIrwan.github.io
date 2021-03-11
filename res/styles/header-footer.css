@@ -3,10 +3,11 @@ article > header > :not(:last-child) {
 }
 
 article > header > :only-child {
-  margin-block-end: calc(var(--spacer) * 2);
+  margin-block-end: var(--spacer2);
 }
 
-article > header > .subtitle::before {
+article > header > .subtitle::before,
+.banner > .subtitle::before {
   content: "—";
 }
 
@@ -25,9 +26,9 @@ footer {
   margin-inline-end: 4%;
   margin-inline-start: 4%;
   padding-block-end: 4%;
-  padding-block-start: calc(var(--spacer) * 4);
-  padding-inline-end: calc(var(--spacer) * 4);
-  padding-inline-start: calc(var(--spacer) * 4);
+  padding-block-start: var(--spacer4);
+  padding-inline-end: var(--spacer4);
+  padding-inline-start: var(--spacer4);
 }
 
 footer > nav > .page-jump-menu {
@@ -37,11 +38,11 @@ footer > nav > .page-jump-menu {
 footer > section.page-info {
   display: flex;
   flex-flow: row;
-  margin-block-end: calc(var(--spacer) * 2);
+  margin-block-end: var(--spacer2);
 }
 
 footer > section.page-info > :not(:last-child) {
-  margin-inline-end: calc(var(--spacer) * 4);
+  margin-inline-end: var(--spacer4);
 }
 
 footer > section.page-info > div {
@@ -50,7 +51,7 @@ footer > section.page-info > div {
 
 footer > section.page-info > .banner {
   align-self: center;
-  flex: 1 0 auto;
+  flex: 1 0 0;
 }
 
 footer > section.page-info > .banner > h1 {
@@ -74,33 +75,40 @@ article > header > :only-child {
   font-size: 7pt;
   font-style: italic;
   font-weight: normal;
-  margin-inline-end: calc(var(--spacer) * 4);
-  margin-inline-start: calc(var(--spacer) * 4);
+  margin-inline-end: var(--spacer4);
+  margin-inline-start: var(--spacer4);
   padding-inline-end: var(--spacer);
+}
+
+.banner > .subtitle {
+  text-align: start;
 }
 
 .banner > .subtitle::before {
   color: unset;
-  content: "—";
 }
 
 @media (max-width: 720px) {
   footer {
     margin: 0;
-    padding-block-end: calc(var(--spacer) * 16);
+    padding-block-end: var(--spacer16);
   }
 
   footer > section.page-info {
-    flex-flow: column;
+    flex-direction: column;
   }
 
   footer > section.page-info > :not(:last-child) {
-    margin-block-end: calc(var(--spacer) * 2);
+    margin-block-end: var(--spacer2);
     margin-inline-end: 0;
   }
 
   footer > section.page-info > div {
     text-align: center;
+  }
+
+  footer > section.page-info > .banner {
+    flex-basis: auto;
   }
 
   .banner > h1:not(:last-child) {

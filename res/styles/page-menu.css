@@ -24,7 +24,7 @@ article > nav {
 .page-menu > span:first-child {
   font-size: smaller;
   font-weight: bold;
-  margin-inline-end: calc(var(--spacer) * 2);
+  margin-inline-end: var(--spacer2);
 }
 
 @media (max-width: 720px) {

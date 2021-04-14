@@ -1,9 +1,9 @@
-{% unless definedCssPageMenu %}
-<link rel="stylesheet" href="/res/styles/page-menu.css" />
-  {% assign definedCssPageMenu = true %}
+{% unless definedCssNav %}
+<link rel="stylesheet" href="/res/styles/nav.css" />
+  {% assign definedCssNav = true %}
 {% endunless %}
 <nav>
-  <div class="page-menu">
+  <div class="menu line page">
     <span>Menu:</span>
     {% for entry in page.menu %}
     {% assign slice = entry.label | slice: 0 %}

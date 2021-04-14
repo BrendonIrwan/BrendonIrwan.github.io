@@ -1,9 +1,9 @@
-{% unless definedCssPageMenu %}
-<link rel="stylesheet" href="/res/styles/page-menu.css" />
-  {% assign definedCssPageMenu = true %}
+{% unless definedCssNav %}
+<link rel="stylesheet" href="/res/styles/nav.css" />
+  {% assign definedCssNav = true %}
 {% endunless %}
 <nav>
-  <div class="page-jump-menu">
+  <div class="menu line jump">
     <span>[<a class="up" href="/">Home</a>]</span>
     <span>[<a href="#top">Top</a>]</span>
     <span>[<a tabindex="0" onclick="window.history.forward()">Forward</a>]</span>

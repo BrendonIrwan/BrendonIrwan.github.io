@@ -11,7 +11,7 @@
       {% else %} {{ siteTitle }} {% endif %}
     </title>
     {% assign definedCssHeaderFooter = false %}
-    {% assign definedCssPageMenu = false %}
+    {% assign definedCssNav = false %}
   </head>
   <body>
 {% include css-curtain.html %}
@@ -24,6 +24,6 @@
 {% include page-info.html %}
 {% include jump-menu.html %}
     </footer>
-{% include menu.html %}
+{% include tree-menu.html %}
   </body>
 </html>

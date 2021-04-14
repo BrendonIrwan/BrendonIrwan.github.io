@@ -1,4 +1,7 @@
-<link rel="stylesheet" href="/res/styles/menu.css" />
+{% unless definedCssNav %}
+  <link rel="stylesheet" href="/res/styles/nav.css" />
+  {% assign definedCssNav = true %}
+{% endunless %}
 <nav>
   <div class="menu root" tabindex="0">
     <label>≡ Menu</label>

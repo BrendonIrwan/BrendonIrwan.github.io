@@ -1,0 +1,10 @@
+path: "pages/contact"
+date: 2021-06-10
+head:
+  title: "Contact"
+body:
+  title: "Contact"
+  subtitle: "Find out where you can…find me."
+menu:
+  - label: "^Home"
+    href: "/"

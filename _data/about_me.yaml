@@ -1,0 +1,10 @@
+path: "pages/about/me"
+date: 2021-05-16
+head:
+  title: "About Me"
+body:
+  title: "About Me"
+  subtitle: "My dynamic self-introduction."
+menu:
+  - label: "^Home"
+    href: "/"

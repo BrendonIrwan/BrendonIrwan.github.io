@@ -1,11 +1,11 @@
 <ul class="anchor">
-  <li><span>[<a href="https://{{ siteUrl }}/pages/about/me"
->About Me</a>]</span><span
->My dynamic self-introduction. <span class="smaller"><i>On EDEN Online.</i></span></span></li>
+  <li><span>[<a href="/{{ site.data["about_me"].path }}"
+>{{ site.data["about_me"].body.title }}</a>]</span><span
+>{{ site.data["about_me"].body.subtitle }}</span></li>
   <li><span>[<a href="https://{{ siteUrl }}/pages/projects"
 >Projects</a>]</span><span
 >What I am and was up to. <span class="smaller"><i>On EDEN Online.</i></span></span></li>
-  <li><span>[<a href="https://{{ siteUrl }}/pages/contact"
->Contact</a>]</span><span
->Find out where you can…find me. <span class="smaller"><i>On EDEN Online.</i></span></span></li>
+  <li><span>[<a href="/{{ site.data["home_contact"].path }}"
+>{{ site.data["home_contact"].body.title }}</a>]</span><span
+>{{ site.data["home_contact"].body.subtitle }}</span></li>
 </ul>

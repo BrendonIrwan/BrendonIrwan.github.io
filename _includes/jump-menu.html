@@ -4,8 +4,7 @@
 {% endunless %}
 <nav>
   <div class="menu line jump">
-    <span>[<a class="up" href="/">Home</a>]</span>
-    <span>[<a href="#top">Top</a>]</span>
-    <span>[<a tabindex="0" onclick="window.history.forward()">Forward</a>]</span>
+    <span>[<a class="up" href="/{{ site.data["home"].path }}">Home</a>]</span>
+    <span>[<a href="/{{ site.data["home_contact"].path }}">{{ site.data["home_contact"].body.title }}</a>]</span>
   </div>
 </nav>

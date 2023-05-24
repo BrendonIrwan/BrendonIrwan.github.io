@@ -1,0 +1,21 @@
+path: "pages/guests/"
+date: 2022-12-31
+head:
+  title: "Guest Gateway"
+body:
+  title: "Guest Gateway"
+  subtitle: "for current visitors of Metro Vancouver."
+menu:
+  - label: "General"
+    href: "#general"
+    title: "General"
+    subtitle: "For both indoors and outdoors."
+  - label: "Travel"
+    href: "#travel"
+    title: "Travel"
+    subtitle: "Check before and during your travels."
+  - label: "TV Schedules"
+    href: "#tv-schedules"
+    title: "TV Schedules"
+    subtitle: "When will your favorites go on air?"
+  - key: "_home"

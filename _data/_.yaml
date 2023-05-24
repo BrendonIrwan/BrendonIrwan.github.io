@@ -1,0 +1,33 @@
+root: ""
+author: "Brendon"
+class: "Gateway"
+title: "Gateway"
+subtitle: "Portal Bridging Site"
+host: "BrendonIrwan.github.io"
+foot: "All coding and design by Brendon."
+formDate: "%m/%d/%Y"
+gitHome: "https://github.com/BrendonIrwan"
+gitUser: "BrendonIrwan"
+navLabelPage: "Menu:"
+navLabelSite: "Jump:"
+navLabelTree: "≡ Menu"
+noBackground: true
+noCurtain: false
+noFooter: false
+noHeader: false
+noNavPage: false
+noNavSite: false
+pathHome: ""
+pathIcon: "https://ed7n.github.io/res/media/favicon.png"
+pathRes: "https://ed7n.github.io/res"
+splitSubtitle: ": "
+splitTitle: " - "
+eon: "https://ed7n.github.io"
+handle: "TD070VA1"
+menu:
+  - key: "_home"
+    class: "up"
+  - label: "Privacy"
+    class: "out"
+    href: "https://ed7n.github.io/pages/privacy"
+  - key: "_contact"

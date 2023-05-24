@@ -1,0 +1,19 @@
+path: ""
+date: 2023-03-24
+head:
+  title: "Gateway"
+body:
+  title: "Home"
+menu:
+  - label: "Select Portal"
+    href: "#select-portal"
+    title: "Select Portal"
+    subtitle: "Start here:"
+  - label: "Fast Lane"
+    href: "#fast-lane"
+    title: "Fast Lane"
+    subtitle: "…or jump straight to one of these:"
+  - label: "Welcome"
+    href: "#welcome"
+    title: "Welcome"
+    subtitle: "to Gateway."

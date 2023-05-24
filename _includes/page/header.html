@@ -1,0 +1,30 @@
+{%-unless pageHasStyleHeaderFooter-%}
+<link rel="stylesheet" href="{{sitePathRes}}/styles/header-footer.css" />
+  {%-assign pageHasStyleHeaderFooter = true%}
+{%endunless-%}
+{%-if pageData.body.banner-%}
+<header>
+  <section>
+    {{pageData.body.banner}}
+  {%-assign pageHasHeader = true-%}
+{%-elsif pageIsHome-%}
+<header>
+  <section class="banner">
+    {%include banner.html%}
+  {%-assign pageHasHeader = true-%}
+{%-elsif pageTitle or pageSubtitle-%}
+<header>
+  <section class="heading">
+  {%-if pageTitle%}
+    <h1>{{pageTitle}}</h1>
+  {%-endif-%}
+  {%-if pageSubtitle%}
+    <p class="subtitle">{{pageSubtitle}}</p>
+  {%-endif-%}
+  {%-assign pageHasHeader = true-%}
+{%-endif-%}
+{%-if pageHasHeader%}
+  </section>
+</header>
+<div class="hr"></div>
+{%-endif-%}

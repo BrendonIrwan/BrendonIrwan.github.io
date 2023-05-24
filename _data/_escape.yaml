@@ -1,0 +1,9 @@
+path: "pages/escape/"
+date: 2022-12-31
+head:
+  title: "Escape"
+body:
+  title: "Escape"
+  subtitle: "Excursion turned overnight."
+menu:
+  - key: "_net-space"

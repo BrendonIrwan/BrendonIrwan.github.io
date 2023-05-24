@@ -1,0 +1,9 @@
+path: "404"
+date: 2023-02-17
+head:
+  title: "HTTP 404: Not Found"
+body:
+  title: "HTTP 404: Not Found"
+  subtitle: "<i>The page or resource you requested for can not be found.</i>"
+menu:
+  - key: "_home"

@@ -1,0 +1,17 @@
+path: "pages/contributions/"
+date: 2023-05-12
+head:
+  title: "Contributions"
+body:
+  title: "Contributions"
+  subtitle: "Free software contributions."
+menu:
+  - label: "Completed"
+    href: "#completed"
+    title: "Completed"
+    subtitle: "Because they bothered to."
+  - label: "Abandoned"
+    href: "#abandoned"
+    title: "Abandoned"
+    subtitle: "Because their severity may have been negligible."
+  - key: "_net-space"

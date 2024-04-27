@@ -1,0 +1,9 @@
+path: "pages/about-me/"
+date: 2022-12-31
+head:
+  title: "About Me"
+body:
+  title: "About Me"
+  subtitle: "My dynamic self-introduction."
+menu:
+  - key: "_net-space"

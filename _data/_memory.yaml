@@ -1,0 +1,9 @@
+path: "pages/memory/"
+date: 2023-04-10
+head:
+  title: "Memory"
+body:
+  title: "Memory"
+  subtitle: "All alone in the moonlight."
+menu:
+  - key: "_net-space"

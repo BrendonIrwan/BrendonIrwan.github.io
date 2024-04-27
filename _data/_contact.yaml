@@ -1,0 +1,9 @@
+path: "pages/contact/"
+date: 2023-02-17
+head:
+  title: "Contact"
+body:
+  title: "Contact"
+  subtitle: "Find out where you can find me."
+menu:
+  - key: "_home"

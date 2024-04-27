@@ -1,0 +1,18 @@
+path: "pages/net-space/"
+date: 2024-04-27
+head:
+  title: "My NET Space"
+body:
+  title: "My NET Space"
+  subtitle: "Not Musk's nor Zuckerberg's."
+menu:
+  - label: "Anchors"
+    href: "#anchors"
+    title: "Anchors"
+  - label: "Pages"
+    href: "#pages"
+    title: "Pages"
+  - label: "Media"
+    href: "#media"
+    title: "Media"
+  - key: "_home"

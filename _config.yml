@@ -1,0 +1,7 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "document"
+exclude: ["LICENSE", "LICENSE-contents", "LICENSE-technologies", "README.md"]

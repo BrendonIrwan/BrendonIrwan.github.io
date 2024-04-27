@@ -1,0 +1,18 @@
+---
+key: "_home"
+---
+{%-include variables.html-%}
+<link rel="stylesheet" href="{{sitePathRes}}/notices.css" />
+<script defer src="{{sitePathRes}}/notices.js"></script>
+<section class="no-margin smaller">
+  <ul id="notices">
+    <li><span>The [<a href="{{siteData.eon}}/pages/about/color-scheme">color
+scheme</a>] is <span id="color-scheme-fallback">disabled</span><span id=
+"color-scheme-state"></span><span id="color-scheme-value"></span>.</span></li>
+  </ul>
+</section>
+{%include sections.html-%}
+<section>
+  <div class="hr"></div>
+  <p><i>Built on <span class="bolder">NET</span> technology.</i></p>
+</section>

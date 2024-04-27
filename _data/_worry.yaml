@@ -1,0 +1,9 @@
+path: "pages/worry/"
+date: 2024-04-27
+head:
+  title: "I'm worried"
+body:
+  title: "I'm worried"
+  subtitle: "Say something."
+menu:
+  - key: "_net-space"
